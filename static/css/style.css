@@ -1,0 +1,54 @@
+/* styles.css */
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+h1 {
+    color: #333;
+}
+
+/* Navigation links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Button styles */
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* List styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Form styles */
+form {
+    margin-top: 16px;
+}
+
+/* Edit and delete buttons */
+.edit-button {
+    background-color: #28a745;
+    margin-left: 8px;
+}
+
+
+.form-field-gap {
+    margin-bottom: 10px; /* You can adjust the value as needed */
+}

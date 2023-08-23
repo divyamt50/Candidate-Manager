@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Candidate Detail{% endblock %}
+
+{% block content %}
+    <h1>Candidate Detail</h1>
+    <p><strong>Name:</strong> {{ candidate.first_name }} {{ candidate.last_name }}</p>
+    <p><strong>Email:</strong> {{ candidate.email }}</p>
+    
+
+    {% if candidate.photo %}
+        <p><strong>Image: </strong> <a href ="{{ candidate.photo.url }}">View Photo</a></p>
+    {% endif %}
+
+    <p><strong>Role:</strong> {{ candidate.get_role_display }}</p>
+    <p><strong>Screening Mode:</strong> {{ candidate.screening_mode }}</p>
+    <p><strong>Date of Birth:</strong> {{ candidate.dob }}</p>
+    <p><strong>Gender:</strong> {{ candidate.gender }}</p>
+    <p><strong>Marital Status:</strong> {{ candidate.marital_status }}</p>
+    <p><strong>Contact No Primary:</strong> {{ candidate.contact_no_primary }}</p>
+    <p><strong>Contact No Alternate:</strong> {{ candidate.contact_no_alternate }}</p>
+    <p><strong>Referred By:</strong> {{ candidate.referred_by }}</p>
+    <p><strong>Referred By Other:</strong> {{ candidate.referred_by_other }}</p>
+    <p><strong>Address:</strong> {{ candidate.address_line }}, {{ candidate.city }}, {{ candidate.pincode }}</p>
+    <p><strong>Experience Level:</strong> {{ candidate.experience_level }}</p>
+    <p><strong>Education Level:</strong> {{ candidate.education_level }}</p>
+    <p><strong>Education Qualification:</strong> {{ candidate.education_qualification }}</p>
+    <p><strong>Education Specialization:</strong> {{ candidate.education_specialization }}</p>
+    <p><strong>Years of Experience:</strong> {{ candidate.years_of_experience }}</p>
+    <p><strong>Current Employer:</strong> {{ candidate.current_employer }}</p>
+    <p><strong>Current Designation:</strong> {{ candidate.current_designation }}</p>
+    <p><strong>Current Monthly Salary:</strong> {{ candidate.current_monthly_salary }}</p>
+    <p><strong>Expected Monthly Salary:</strong> {{ candidate.expected_monthly_salary }}</p>
+    <p><strong>Notice Period:</strong> {{ candidate.notice_period }}</p>
+    <p><strong>Reason for Change:</strong> {{ candidate.reason_for_change }}</p>
+    
+    
+    {% if candidate.resume %}
+        <p><strong>Resume:</strong> <a href="{{ candidate.resume.url }}" target="_blank">View Resume</a></p>
+    {% endif %}
+    
+
+    
+{% endblock %}

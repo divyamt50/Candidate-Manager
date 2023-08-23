@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Candidate List{% endblock %}
+
+{% block content %}
+    <h1>Candidate List</h1>
+    <ul>
+        {% for candidate in candidates %}
+            <li>
+                <a href="{% url 'candidate_detail' candidate.pk %}">{{ candidate.first_name }} {{ candidate.last_name }}</a>
+                <a href="{% url 'candidate_edit' candidate.pk %}" class="edit-button" style="color: blueviolet; margin: 20px 0 20px 0;">Edit</a>
+                <a href="{% url 'delete_candidate' candidate.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'add_candidate' %}" class="btn btn-primary">Add Candidate</a>
+{% endblock %}
